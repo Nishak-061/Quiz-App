@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+.dashboard-container {
+  display: flex;
+  gap: 10px;
+  height: 100vh;
+}
+
+.dashboard-sidebar-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  color: white;
+  background-color: #041325;
+  padding: 25px;
+}
+
+.dashboard-heading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: "Poppins", sans-serif;
+  margin-top: -12px;
+}
+
+.dashboard-heading-icon {
+  font-size: 35px;
+}
+
+.dashboard-sidebar-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 60%;
+}
+
+.dashboard-sidebar-btn {
+  width: 200px;
+  padding: 20px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  background-color: transparent;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  transition: transform 0.2s ease;
+}
+
+.dashboard-sidebar-btn:hover {
+  border: 1px solid white;
+}
+
+.dashboard-sidebar-logout-btn {
+  width: 200px;
+  padding: 12px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  color: white;
+  background-color: #e4021b;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 78%;
+}
+
+.dashboard-sidebar-logout-btn:hover {
+  transition: transform 0.2s ease;
+  transform: scale(1.1);
+}
+
+.dashboard-main-content {
+  margin-left: 350px;
+}
+
+.dashboard-current-username {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #000c66;
+}
+
+.dashboard-current-month-container {
+  display: flex;
+  gap: 180px;
+}
+
+.current-dashboard-quiz {
+  background-color: #fbf6f3;
+  padding: 5px;
+  width: 450px;
+  height: 220px;
+  border-radius: 8px;
+  display: flex;
+  gap: 40px;
+  transition: transform 0.2s ease;
+}
+
+.current-dashboard-quiz:hover {
+  box-shadow: 0px 2px 7px 0px #efe7bc;
+}
+
+.current-dashboard-total-quiz,
+.current-dashboard-total-qanda,
+.current-dashboard-total-poll {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  width: 120px;
+  border-radius: 30px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  align-items: center;
+  justify-content: center;
+}
+
+.current-dashboard-total-quiz {
+  background-color: #a3ebb1;
+  height: 200px;
+  margin-top: 10px;
+}
+
+.current-dashboard-total-qanda {
+  background-color: #fbe39d;
+  height: 200px;
+  margin-top: 10px;
+}
+
+.current-dashboard-total-poll {
+  background-color: #eae7fa;
+  height: 200px;
+  margin-top: 10px;
+}
+
+.current-dashboard-total-quiz-text {
+  border: 3px solid black;
+  border-radius: 50%;
+  width: 30px;
+  padding: 12px;
+}
+
+.current-dashboard-total-qanda-text {
+  border: 3px solid black;
+  border-radius: 50%;
+  width: 30px;
+  padding: 12px;
+}
+
+.current-dashboard-total-poll-text {
+  border: 3px solid black;
+  border-radius: 50%;
+  width: 30px;
+  padding: 12px;
+}
+
+.dashboard-month-container {
+  background-color: transparent;
+  padding: 5px;
+  width: 450px;
+  height: 250px;
+  margin-top: -30px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.dashboard-month-container:hover {
+  box-shadow: 3px 2px 8px 3px #7ec8e3;
+}
+
+.dashboard-month-name {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  color: #000c66;
+}
+
+.dashboard-month-percentage-bar {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.dashboard-month-percentage-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.dashboard-percentage-bar {
+  width: 100%;
+  height: 5px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgb(48, 29, 221);
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.dashboard-month-total-created-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 12px;
+}
+
+.dashboard-percentage-bar::-webkit-progress-bar {
+  background-color: #ffc5d0;
+}
+
+.dashboard-percentage-bar::-webkit-progress-value {
+  background-color: black;
+}
+
+.dashboard-total-month-quiz,
+.dashboard-total-month-qanda,
+.dashboard-total-month-poll {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #c2e2f5;
+  padding: 8px;
+  height: 130px;
+  border-radius: 25px;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-total-month-number,
+.dashboard-total-month-qanda-number,
+.dashboard-total-month-poll-number {
+  font-size: 20px;
+  background-color: white;
+  text-align: center;
+  padding: 8px;
+  width: 30px;
+  border-radius: 50px;
+}
+
+.dashboard-pie-chart-latest-quiz-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.dashboard-pie-chart-container {
+  width: 360px;
+  height: 340px;
+}
+
+.dashboard-top-latest-quiz-container {
+  border-radius: 10px;
+  padding: 10px;
+  width: 720px;
+  height: 220px;
+  background-color: #f3f5f9;
+  transition: transform 0.2s ease;
+}
+
+.dashboard-top-latest-quiz-container:hover {
+  box-shadow: 1px 2px 7px 1px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-latest-quiz-heading {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.dahboard-top-latest-quiz-items {
+  display: flex;
+  justify-content: space-around;
+}
+
+.dashboard-name-type-month {
+  display: flex;
+  flex-direction: column;
+  background-color: #c2e2f5;
+  border-radius: 12px;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  align-items: center;
+  padding: 5px;
+  box-shadow: 0px 2px 8px 0px #c2e2f5;
+}
+
+.dashboard-name-type-month-ellipsis {
+  max-width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

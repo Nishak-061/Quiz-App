@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+.thanks-poll-page-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(4, 19, 37);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thanks-poll-container {
+  width: 90%;
+  height: 90%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(250, 249, 249, 0.2);
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.thanks-poll-heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 60px;
+  margin-top: 10px;
+  color: #061e47;
+}
+
+.thanks-poll-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.thanks-poll-wave svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  top: 350px;
+  opacity: 0.8;
+}
+
+.thanks-poll-wave svg:nth-child(2) {
+  position: relative;
+  top: 50px;
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 768px) {
+  .thanks-poll-container {
+    width: 95%;
+    height: 85%;
+
+    border-radius: 16px;
+  }
+
+  .thanks-poll-heading {
+    font-size: 40px;
+  }
+
+  .thanks-poll-wave svg {
+    top: 200px;
+  }
+
+  .thanks-poll-wave svg:nth-child(2) {
+    top: 90px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .thanks-poll-container {
+    width: 95%;
+    height: 80%;
+
+    border-radius: 14px;
+  }
+
+  .thanks-poll-heading {
+    font-size: 28px;
+  }
+
+  .thanks-poll-wave svg {
+    top: 100px;
+  }
+
+  .thanks-poll-wave svg:nth-child(2) {
+    top: 20px;
+  }
+}
