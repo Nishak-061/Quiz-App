@@ -173,7 +173,7 @@ const QandA = ({ closeModel, quizName, quizId, existingData }) => {
       const link =
         existingData?.link ||
         // `http://localhost:5173/qanda-quiz-interface/${randomId}`;
-        `${import.meta.env.VITE_FRONTEND_URL}/qanda-quiz-interface/${randomId}`
+        `${import.meta.env.VITE_FRONTEND_URL || 'https://quiz-app-tvyn.onrender.com'}/qanda-quiz-interface/${randomId}`
       setGeneratedLink(link);
 
       const payload = {

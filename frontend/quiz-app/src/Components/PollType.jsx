@@ -177,7 +177,7 @@ const PollType = ({ closeModel, quizId, existingData }) => {
       const fullLink =
         existingData?.link ||
         // `http://localhost:5173/poll-quiz-interface/${randomLink}`;
-        `${import.meta.env.VITE_FRONTEND_URL}/poll-quiz-interface/${randomLink}`
+        `${import.meta.env.VITE_FRONTEND_URL || 'https://quiz-app-tvyn.onrender.com'}/poll-quiz-interface/${randomLink}`
       setQuizLink(fullLink);
 
       const payload = {
