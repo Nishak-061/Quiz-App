@@ -176,7 +176,8 @@ const PollType = ({ closeModel, quizId, existingData }) => {
       const randomLink = uuidv4();
       const fullLink =
         existingData?.link ||
-        `http://localhost:5173/poll-quiz-interface/${randomLink}`;
+       // `http://localhost:5173/poll-quiz-interface/${randomLink}`;
+        `${window.location.origin}/poll-quiz-interface/${randomLink}`
       setQuizLink(fullLink);
 
       const payload = {
