@@ -23,7 +23,7 @@ const LoginPage = ({ closeModal, openRegister }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/auth/login",
+        "https://quiz-app-backend-s3ov.onrender.com/api/auth/login",
         user
       );
       setMessage(response.data.message);

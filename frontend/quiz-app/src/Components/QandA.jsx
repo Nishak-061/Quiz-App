@@ -186,14 +186,14 @@ const QandA = ({ closeModel, quizName, quizId, existingData }) => {
       if (existingData) {
         console.log("Updating quiz with ID:", existingData._id);
         await axios.put(
-          `http://localhost:8080/api/qanda/edit/${existingData._id}`,
+          `https://quiz-app-backend-s3ov.onrender.com/api/qanda/edit/${existingData._id}`,
           payload
         );
 
         toast.success("Q&A Quiz updated successfully");
       } else {
         const response = await axios.post(
-          "http://localhost:8080/api/qanda/create",
+          "https://quiz-app-backend-s3ov.onrender.com/api/qanda/create",
           payload
         );
 

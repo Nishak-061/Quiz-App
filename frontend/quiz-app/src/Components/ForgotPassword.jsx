@@ -30,7 +30,7 @@ const ForgotPassword = ({ closeModal }) => {
 
     try {
       const res = await axios.post(
-        "http://localhost:8080/api/auth/forgot-password",
+        "https://quiz-app-backend-s3ov.onrender.com/api/auth/forgot-password",
         {
           email: form.email,
           newPassword: form.newPassword,
