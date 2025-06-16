@@ -172,8 +172,7 @@ const QandA = ({ closeModel, quizName, quizId, existingData }) => {
       const randomId = uuidv4();
       const link =
         existingData?.link ||
-        // `http://localhost:5173/qanda-quiz-interface/${randomId}`;
-        `${import.meta.env.VITE_FRONTEND_URL || 'https://quiz-app-tvyn.onrender.com'}/qanda-quiz-interface/${randomId}`
+        `http://localhost:5173/qanda-quiz-interface/${randomId}`;
       setGeneratedLink(link);
 
       const payload = {
@@ -187,14 +186,14 @@ const QandA = ({ closeModel, quizName, quizId, existingData }) => {
       if (existingData) {
         console.log("Updating quiz with ID:", existingData._id);
         await axios.put(
-          `https://quiz-app-backend-s3ov.onrender.com/api/qanda/edit/${existingData._id}`,
+          `http://localhost:8080/api/qanda/edit/${existingData._id}`,
           payload
         );
 
         toast.success("Q&A Quiz updated successfully");
       } else {
         const response = await axios.post(
-          "https://quiz-app-backend-s3ov.onrender.com/api/qanda/create",
+          "http://localhost:8080/api/qanda/create",
           payload
         );
 

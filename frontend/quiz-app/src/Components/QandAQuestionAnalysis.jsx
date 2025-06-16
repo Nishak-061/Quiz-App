@@ -10,7 +10,7 @@ const QandAQuestionAnalysis = ({ quizId }) => {
     const fetchQuizDetails = async () => {
       try {
         const response = await axios.get(
-          `https://quiz-app-backend-s3ov.onrender.com/api/qanda/analysis/${quizId}`
+          `http://localhost:8080/api/qanda/analysis/${quizId}`
         );
         setQuizData(response.data);
       } catch (error) {

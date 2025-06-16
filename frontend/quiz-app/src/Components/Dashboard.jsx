@@ -58,7 +58,7 @@ const Dashboard = () => {
     const fetchQuizCounts = async () => {
       try {
         const res = await axios.get(
-          "https://quiz-app-backend-s3ov.onrender.com/api/quizzes/quiz-counts"
+          "http://localhost:8080/api/quizzes/quiz-counts"
         );
         setQuizCounts(res.data);
       } catch (error) {
@@ -72,7 +72,7 @@ const Dashboard = () => {
     const fetchLatestQuizzes = async () => {
       try {
         const res = await axios.get(
-          "https://quiz-app-backend-s3ov.onrender.com/api/quizzes/all-quizzes"
+          "http://localhost:8080/api/quizzes/all-quizzes"
         );
         const sortedQuizzes = res.data
           .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))

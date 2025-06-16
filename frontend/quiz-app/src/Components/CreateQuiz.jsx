@@ -14,7 +14,7 @@ const CreateQuiz = ({ closeModel }) => {
     if (quizName && quizType) {
       try {
         const response = await axios.post(
-          "https://quiz-app-backend-s3ov.onrender.com/api/quiz/create",
+          "http://localhost:8080/api/quiz/create",
           {
             name: quizName,
             type: quizType,
