@@ -17,7 +17,7 @@ const PollQuizInterface = () => {
     const fetchPollData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/pollQuiz/get-quiz/${quizLink}`
+          `https://quiz-app-backend-m5sm.onrender.com/api/pollQuiz/get-quiz/${quizLink}`
         );
 
         setPollData(response.data);
@@ -50,7 +50,7 @@ const PollQuizInterface = () => {
       setSelectedOption(null);
     } else {
       try {
-        await axios.post("http://localhost:8080/api/pollQuiz/submit-response", {
+        await axios.post("https://quiz-app-backend-m5sm.onrender.com/api/pollQuiz/submit-response", {
           quizId: pollData._id,
           answers: updatedResponses,
         });

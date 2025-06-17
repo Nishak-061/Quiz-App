@@ -26,7 +26,7 @@ const Analytics = () => {
     const fetchQuizzes = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8080/api/quizzes/all-quizzes"
+          "https://quiz-app-backend-m5sm.onrender.com/api/quizzes/all-quizzes"
         );
         console.log("Fetched quizzes:", response.data);
         setQuizzes(response.data);
@@ -89,7 +89,7 @@ const Analytics = () => {
 
   const confirmDelete = async () => {
     try {
-      await axios.delete(`http://localhost:8080/api/quizzes/${quizToDelete}`);
+      await axios.delete(`https://quiz-app-backend-m5sm.onrender.com/api/quizzes/${quizToDelete}`);
       setQuizzes((prev) => prev.filter((quiz) => quiz._id !== quizToDelete));
       toast.success("Quiz deleted successfully!");
     } catch (error) {
@@ -107,7 +107,7 @@ const Analytics = () => {
         const linkParts = quiz.link.split("/");
         const uniqueLink = linkParts[linkParts.length - 1];
         const response = await axios.get(
-          `http://localhost:8080/api/qanda/get-quiz/${uniqueLink}`
+          `https://quiz-app-backend-m5sm.onrender.com/api/qanda/get-quiz/${uniqueLink}`
         );
         const quizData = response.data.quiz;
 
@@ -123,7 +123,7 @@ const Analytics = () => {
         const linkParts = quiz.link.split("/");
         const uniqueLink = linkParts[linkParts.length - 1];
         const response = await axios.get(
-          `http://localhost:8080/api/pollQuiz/get-quiz/${uniqueLink}`
+          `https://quiz-app-backend-m5sm.onrender.com/api/pollQuiz/get-quiz/${uniqueLink}`
         );
         console.log("Setting modal open for Poll", response.data.quiz);
         setSelectedQuiz({

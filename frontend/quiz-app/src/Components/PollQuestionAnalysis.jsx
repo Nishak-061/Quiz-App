@@ -12,7 +12,7 @@ const PollQuestionAnalysis = ({ quizId }) => {
     const fetchQuizDetails = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/pollQuiz/analysis/${quizId}`
+          `https://quiz-app-backend-m5sm.onrender.com/api/pollQuiz/analysis/${quizId}`
         );
         console.log("quizId:", quizId);
         console.log("response data:", response.data);

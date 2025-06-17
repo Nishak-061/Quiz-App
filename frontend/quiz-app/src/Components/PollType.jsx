@@ -189,13 +189,13 @@ const PollType = ({ closeModel, quizId, existingData }) => {
       if (existingData) {
         console.log("Updating quiz with ID", existingData._id);
         await axios.put(
-          `http://localhost:8080/api/pollQuiz/edit/${existingData._id}`,
+          `https://quiz-app-backend-m5sm.onrender.com/api/pollQuiz/edit/${existingData._id}`,
           payload
         );
         toast.success("Poll Quiz updated successfully");
       } else {
         const res = await axios.post(
-          "http://localhost:8080/api/pollQuiz/create",
+          "https://quiz-app-backend-m5sm.onrender.com/api/pollQuiz/create",
           payload
         );
         toast.success("Poll Quiz saved successfully");

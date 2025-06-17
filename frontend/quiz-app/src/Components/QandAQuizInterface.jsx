@@ -17,7 +17,7 @@ const QandAQuizInterface = () => {
     const fetchQuiz = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/qanda/get-quiz/${quizLink}`
+          `https://quiz-app-backend-m5sm.onrender.com/api/qanda/get-quiz/${quizLink}`
         );
         setQuizData(response.data.quiz);
         setLoading(false);
@@ -105,7 +105,7 @@ const QandAQuizInterface = () => {
     });
 
     try {
-      await axios.post("http://localhost:8080/api/qanda/save-response", {
+      await axios.post("https://quiz-app-backend-m5sm.onrender.com/api/qanda/save-response", {
         quizId: quizData._id,
         answers,
       });
