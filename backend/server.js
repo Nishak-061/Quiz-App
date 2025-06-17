@@ -36,10 +36,10 @@ app.use("/api/pollQuiz", pollQuizRoutes);
 app.use("/api/qanda", qandaQuizRoutes);
 app.use("/api/quizzes", allQuizRoutes);
 
-app.use(express.static(path.join(__dirname, '../frontend/dist')))
+app.use(express.static(path.join(__dirname, '../frontend/quiz-app/dist')))
 
 app.get('*', (req,res) => {
-  res.sendFile(path.join(__dirname, '../frontend/dist', 'index.html'))
+  res.sendFile(path.join(__dirname, '../frontend/quiz-app/dist', 'index.html'))
 })
 
 const PORT = process.env.PORT || 8080;
