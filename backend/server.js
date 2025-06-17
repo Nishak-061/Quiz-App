@@ -8,6 +8,11 @@ import quizRoutes from "./routes/quizRoutes.js";
 import pollQuizRoutes from "./routes/pollQuizRoutes.js";
 import qandaQuizRoutes from "./routes/qandaQuizRoutes.js";
 import allQuizRoutes from "./routes/allQuizRoutes.js";
+import path from 'path';
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 dotenv.config();
 
@@ -30,6 +35,12 @@ app.use("/api/quiz", quizRoutes);
 app.use("/api/pollQuiz", pollQuizRoutes);
 app.use("/api/qanda", qandaQuizRoutes);
 app.use("/api/quizzes", allQuizRoutes);
+
+app.use(express.static(path.join(__dirname, '../frontend/dist')))
+
+app.get('*', (req,res) => {
+  res.sendFile(path.join(__dirname, '../frontend/dist', 'index.html'))
+})
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
