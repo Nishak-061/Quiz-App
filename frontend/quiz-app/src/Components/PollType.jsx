@@ -176,7 +176,11 @@ const PollType = ({ closeModel, quizId, existingData }) => {
       const randomLink = uuidv4();
       const fullLink =
         existingData?.link ||
+
         // `http://localhost:5173/poll-quiz-interface/${randomLink}`;
+
+       // `http://localhost:5173/poll-quiz-interface/${randomLink}`;
+
         `${window.location.origin}/poll-quiz-interface/${randomLink}`
       setQuizLink(fullLink);
 
@@ -189,13 +193,13 @@ const PollType = ({ closeModel, quizId, existingData }) => {
       if (existingData) {
         console.log("Updating quiz with ID", existingData._id);
         await axios.put(
-          `http://localhost:8080/api/pollQuiz/edit/${existingData._id}`,
+          `https://quiz-app-backend-m5sm.onrender.com/api/pollQuiz/edit/${existingData._id}`,
           payload
         );
         toast.success("Poll Quiz updated successfully");
       } else {
         const res = await axios.post(
-          "http://localhost:8080/api/pollQuiz/create",
+          "https://quiz-app-backend-m5sm.onrender.com/api/pollQuiz/create",
           payload
         );
         toast.success("Poll Quiz saved successfully");

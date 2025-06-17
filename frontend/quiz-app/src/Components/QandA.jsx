@@ -172,11 +172,11 @@ const QandA = ({ closeModel, quizName, quizId, existingData }) => {
       const randomId = uuidv4();
       const link =
         existingData?.link ||
-<<<<<<< HEAD
+
         // `http://localhost:5173/qanda-quiz-interface/${randomId}`;
-=======
+
        // `http://localhost:5173/qanda-quiz-interface/${randomId}`;
->>>>>>> c93d604aaefe8d02d5a926283aa659e36b66f8b6
+
         `${window.location.origin}/qanda-quiz-interface/${randomId}`
       setGeneratedLink(link);
 
