@@ -19,7 +19,7 @@ const PollQuizInterface = () => {
         const response = await axios.get(
           `https://quiz-app-backend-m5sm.onrender.com/api/pollQuiz/get-quiz/${quizLink}`
         );
-
+console.log("Fetch poll data:", response.data);
         setPollData(response.data);
       } catch (error) {
         console.error("Error fetching poll data", error);
