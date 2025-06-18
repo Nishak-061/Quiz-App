@@ -34,8 +34,8 @@ export default router;
 // Fetch Q&A quiz by link
 router.get("/get-quiz/:link", async (req, res) => {
   try {
-    const link = `http://localhost:5173/qanda-quiz-interface/${req.params.link}`;
-    const quiz = await QandAQuiz.findOne({ link });
+    // const link = `http://localhost:5173/qanda-quiz-interface/${req.params.link}`;
+    const quiz = await QandAQuiz.findOne({ link: req.params.link });
 
     if (!quiz) {
       return res.status(404).json({ message: "Quiz not found" });
