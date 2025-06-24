@@ -3,15 +3,25 @@
 body {
   margin: 0;
   padding: 0;
+  
 }
 
 .quiz-homepage {
   background: linear-gradient(135deg, #ddffe7 60%, cyan);
-  height: 100vh;
+  /* height: 100vh;   */ 
+  /* changes made to adapt screen size */
+  min-height:100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+
 }
 
 .quiz-navbar-container {
   width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .quiz-navbar-heading {
@@ -81,7 +91,12 @@ body {
 }
 
 .quiz-home-image {
-  width: 500px;
+  /* width: 500px;
   height: 500px;
+  border-radius: 50%; */
+  width: 100%;
+  max-width: 500px;
+  height: auto;
   border-radius: 50%;
+  
 }
