@@ -6,11 +6,14 @@
     "install-server": "cd backend && npm install",
     "start-server": "cd backend && node server.js",
     "install-frontend": "cd frontend/quiz-app && npm install",
-    "build-frontend":"cd frontend/quiz-app && npm run build",
+    "build-frontend": "cd frontend/quiz-app && npm run build",
     "start-frontend": "cd frontend/quiz-app && npm run dev"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "typed.js": "^3.0.0"
+  }
 }
